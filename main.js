@@ -277,6 +277,11 @@ function setsidebar() {
     topologicalsortoption.value = "topologicalsort";
     topologicalsortoption.innerHTML = "Topological sorting";
 
+    const cliqueoption = document.createElement("option");
+    algorithmselect.appendChild(cliqueoption);
+    cliqueoption.value = "clique";
+    cliqueoption.innerHTML = "Clique";
+
     //speed of algorithm
     let label = document.createElement("label");
     label.innerHTML = `Speed: 1x`;
@@ -322,6 +327,9 @@ function setsidebar() {
                     break;
                 case "topologicalsort":
                     await topologicalsort();
+                    break;
+                case "clique":
+                    await Clique();
                     break;
                 default:
                     warn("Selecione um algoritmo");
