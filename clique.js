@@ -2,7 +2,6 @@
 const MAX = 100;
 
 var clique = [];
-var cliqueNode = [];
  
 // Stores the vertices
 let store = new Array(MAX).fill(0), n = 0;
